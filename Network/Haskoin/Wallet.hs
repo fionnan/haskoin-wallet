@@ -5,7 +5,7 @@
   multisignature transactions. A library API for /hw/ is also exposed.
 -}
 module Network.Haskoin.Wallet
-( 
+(
 -- *Client
   clientMain
 , OutputFormat(..)
@@ -91,7 +91,7 @@ module Network.Haskoin.Wallet
 -- *Database transactions
 , txPage
 , addrTxPage
-, getTx 
+, getTx
 , getAccountTx
 , importTx
 , importNetTx
@@ -114,10 +114,9 @@ module Network.Haskoin.Wallet
 , resetRescan
 ) where
 
-import Network.Haskoin.Wallet.Client
-import Network.Haskoin.Wallet.Server
-import Network.Haskoin.Wallet.Settings
-import Network.Haskoin.Wallet.Types
-import Network.Haskoin.Wallet.KeyRing
-import Network.Haskoin.Wallet.Transaction
-
+import           Network.Haskoin.Wallet.Client
+import           Network.Haskoin.Wallet.KeyRing
+import           Network.Haskoin.Wallet.Server
+import           Network.Haskoin.Wallet.Settings
+import           Network.Haskoin.Wallet.Transaction
+import           Network.Haskoin.Wallet.Types

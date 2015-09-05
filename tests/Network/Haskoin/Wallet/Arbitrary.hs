@@ -36,14 +36,5 @@ instance Arbitrary TxAction where
             ArbitraryTx tx <- arbitrary
             return (ImportTx tx)
         , SignTx <$> arbitrary
-        , do
-            ArbitraryTx tx <- arbitrary
-            sd <- listOf $ do
-                ArbitraryOutPoint outPoint <- arbitrary
-                ArbitraryScriptOutput scriptOutput <- arbitrary
-                ArbitrarySoftPath deriv <- arbitrary
-                let signData = CoinSignData outPoint scriptOutput deriv
-                return signData
-            return (SignOfflineTx tx sd)
         ]
 
